@@ -1,5 +1,5 @@
-/home/ec2-user/spring-boot-websocket-chat-demo/src/main/java/com/example/websocketdemo/controller/WebSocketEventListener.java
-/home/ec2-user/spring-boot-websocket-chat-demo/src/main/java/com/example/websocketdemo/config/WebSocketConfig.java
-/home/ec2-user/spring-boot-websocket-chat-demo/src/main/java/com/example/websocketdemo/controller/ChatController.java
-/home/ec2-user/spring-boot-websocket-chat-demo/src/main/java/com/example/websocketdemo/model/ChatMessage.java
-/home/ec2-user/spring-boot-websocket-chat-demo/src/main/java/com/example/websocketdemo/WebsocketDemoApplication.java
+/home/ec2-user/practice/src/main/java/com/example/websocketdemo/model/ChatMessage.java
+/home/ec2-user/practice/src/main/java/com/example/websocketdemo/controller/ChatController.java
+/home/ec2-user/practice/src/main/java/com/example/websocketdemo/controller/WebSocketEventListener.java
+/home/ec2-user/practice/src/main/java/com/example/websocketdemo/WebsocketDemoApplication.java
+/home/ec2-user/practice/src/main/java/com/example/websocketdemo/config/WebSocketConfig.java
