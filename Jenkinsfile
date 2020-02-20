@@ -28,7 +28,7 @@ environment {
   }
   stage('Create container ') {
    steps {
-      sh "sudo docker run -d -p 5003:9092 spring-boot-websocket-chat-demo"
+      sh "sudo docker run -d -p 5004:9093 spring-boot-websocket-chat-demo"
 	 
     }
   }
@@ -36,7 +36,7 @@ environment {
    steps {
       sh "sudo docker tag dilleswari/spring-boot-websocket-chat-demo:0.0.1-SNAPSHOT practice:newbuild"
 	  sh "sudo docker container ls"
-	   sh'docker login -u dilleswari -p l@xmi321'
+	   sh'sudo docker login -u dilleswari -p l@xmi321'
 	   sh "sudo docker push practice:newbuild"
     }
   }
