@@ -21,21 +21,21 @@ environment {
   }
   stage('Create Docker Image') {
     steps {
-      sh "docker build -t spring-boot-websocket-chat-demo ."
-	  sh "docker image ls"
+      sh "sudo docker build -t spring-boot-websocket-chat-demo ."
+	  sh "sudo docker image ls"
 	      }
   }
   stage('Create container ') {
    steps {
-      sh "docker run -d -p 5001:9091 spring-boot-websocket-chat-demo"
+      sh "sudo docker run -d -p 5001:9091 spring-boot-websocket-chat-demo"
 	 
     }
   }
   stage('Pushing the docker image to docker hub ') {
    steps {
-      sh "docker tag dilleswari/spring-boot-websocket-chat-demo:0.0.1-SNAPSHOTe practice:newbuild"
-	  sh "docker container ls"
-	  sh "docker push practice:newbuild"
+      sh "sudo docker tag dilleswari/spring-boot-websocket-chat-demo:0.0.1-SNAPSHOTe practice:newbuild"
+	  sh "sudo docker container ls"
+	  sh "sudo docker push practice:newbuild"
     }
   }
   }
