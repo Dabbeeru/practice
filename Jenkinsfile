@@ -20,13 +20,12 @@ environment {
 	 
     }
   }
- stage('Building image') {
-      steps{
-        script {
-        sudo docker.build registry + ":$BUILD_NUMBER"
-        }
-      }
-    }
+ stage('Create Docker Image') {
+    steps {
+      sh "docker build -t spring-boot-websocket-chat-demo ."
+	  sh "docker image ls"
+	      }
+  }
 		  stage('Deploy Image') {
       steps{
         script {
