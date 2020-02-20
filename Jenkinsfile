@@ -22,8 +22,8 @@ environment {
   }
  stage('Create Docker Image') {
     steps {
-      sh "docker build -t spring-boot-websocket-chat-demo ."
-	  sh "docker image ls"
+      sh "sudo docker build -t spring-boot-websocket-chat-demo ."
+	  sh "sudo docker image ls"
 	      }
   }
 		  stage('Deploy Image') {
