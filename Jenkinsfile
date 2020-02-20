@@ -40,7 +40,7 @@ environment {
       steps{
         sh "docker rmi $registry:$BUILD_NUMBER"
       }
- 
+ }
   stage('Pushing the docker image to docker hub ') {
    steps {
       sh "sudo docker tag dilleswari/spring-boot-websocket-chat-demo:0.0.1-SNAPSHOT practice:newbuild"
@@ -51,5 +51,3 @@ environment {
   }
   }
   }
-}
- 
