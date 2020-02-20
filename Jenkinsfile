@@ -1,5 +1,6 @@
 pipeline {
 environment {
+	 registry = "dilleswari/practice"
         registryCredential = 'Dockerhub'
   }
           agent any
@@ -33,9 +34,10 @@ environment {
   }
   stage('Pushing the docker image to docker hub ') {
    steps {
-      sh "sudo docker tag dilleswari/spring-boot-websocket-chat-demo:0.0.1-SNAPSHOTe practice:newbuild"
+      sh "sudo docker tag dilleswari/spring-boot-websocket-chat-demo:0.0.1-SNAPSHOT practice:newbuild"
 	  sh "sudo docker container ls"
-	  sh "sudo docker push practice:newbuild"
+	   sh'docker login -u dilleswari -p l@xmi321'
+	   sh "sudo docker push practice:newbuild"
     }
   }
   }
