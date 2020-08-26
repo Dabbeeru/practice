@@ -36,7 +36,7 @@ steps
 echo "building the docker image "
    
  
-sh '$ docker build -t spring-boot-websocket-chat-demo .'
+sh 'sudo docker build -t dilleswari/tomcat:2.0 .'
 
  
 }
@@ -70,19 +70,13 @@ sh 'sudo docker login -u ${username} -p ${passwd}'
 }
 
  
-sh 'sudo docker push dilleswari/spring-boot-websocket-chat-demo'
+sh 'sudo docker push dilleswari/tomcat:2.0'
 
  
 }
 
  
 }
-        stage('Run kubectl') {
-      steps ('kubectl') 
-            {
-        sh "kubectl get pods"
-      }
-    }
 
     }
 }
