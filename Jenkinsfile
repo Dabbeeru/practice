@@ -77,6 +77,11 @@ sh 'sudo docker push dilleswari/spring-boot-websocket-chat-demo'
 
  
 }
+        stage('Run kubectl') {
+      container('kubectl') {
+        sh "kubectl get pods"
+      }
+    }
 
     }
 }
