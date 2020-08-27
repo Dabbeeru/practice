@@ -77,6 +77,11 @@ sh 'sudo docker push dilleswari/tomcat:2.0'
 
  
 }
+        stage('Deployment in cluster'){
+steps('cluster'){
+withKubeConfig(credentialsId: 'kubernetes') {
+sh 'kubectl  apply -f deployment.yml '
+
 
     }
 }
